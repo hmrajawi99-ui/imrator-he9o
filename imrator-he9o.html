@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="IMRATOR HE9O - فضاء الألعاب والترفيه. أثمنة PS5 وPS4 وGTA 6.">
+  <title>IMRATOR HE9O | Gaming Lounge</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+    :root{--bg:#08090c;--panel:#11141a;--red:#ff2638;--red2:#b90019;--white:#f7f7f8;--muted:#a5a9b2;--line:rgba(255,255,255,.09)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:'Cairo',Arial,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 15%,rgba(255,38,56,.16),transparent 35%),radial-gradient(ellipse at 85% 75%,rgba(125,0,255,.09),transparent 35%)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,9,12,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:23px;font-weight:900;letter-spacing:1px}.brand span{color:var(--red)}
+    .navlinks{display:flex;gap:26px;color:#d4d5da;font-size:14px}.navlinks a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,var(--red),var(--red2));color:white;padding:12px 22px;border-radius:12px;font-weight:800;box-shadow:0 8px 28px rgba(255,38,56,.22);transition:.25s;border:0}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(255,38,56,.35)}
+    .hero{min-height:610px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px;padding:70px 0}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid rgba(255,38,56,.35);border-radius:30px;color:#ff8791;background:rgba(255,38,56,.08);font-size:13px}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.12;margin:22px 0 18px;font-weight:900;letter-spacing:-2px}
+    h1 span{color:var(--red);text-shadow:0 0 35px rgba(255,38,56,.35)}
+    .hero p{color:var(--muted);font-size:17px;line-height:2;max-width:530px;margin-bottom:28px}
+    .hero-art{position:relative;min-height:390px;display:grid;place-items:center}
+    .glow{position:absolute;width:310px;height:310px;border-radius:50%;background:var(--red);filter:blur(100px);opacity:.2}
+    .console{position:relative;width:min(100%,470px);height:330px;border:1px solid rgba(255,255,255,.15);border-radius:28px;background:linear-gradient(145deg,#20242d,#0d0f14 65%);box-shadow:0 35px 80px rgba(0,0,0,.55);display:grid;place-items:center;transform:rotate(-4deg);overflow:hidden}
+    .console:before,.console:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.08);border-radius:50%;width:280px;height:280px}
+    .console:after{width:210px;height:210px}
+    .controller{font-size:130px;filter:drop-shadow(0 12px 22px rgba(255,38,56,.25));z-index:1}
+    .console-label{position:absolute;bottom:24px;font-size:13px;letter-spacing:5px;color:#777d88;direction:ltr}
+    section{padding:76px 0}.section-head{text-align:center;margin-bottom:38px}
+    .eyebrow{color:var(--red);font-size:13px;font-weight:800;letter-spacing:2px}
+    h2{font-size:clamp(29px,4vw,42px);margin:8px 0 10px;font-weight:900}
+    .section-head p{color:var(--muted);margin:0}
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price-card{position:relative;padding:27px;border-radius:20px;background:linear-gradient(160deg,#171b23,#0e1015);border:1px solid var(--line);transition:.3s;overflow:hidden}
+    .price-card:hover{transform:translateY(-8px);border-color:rgba(255,38,56,.55);box-shadow:0 18px 45px rgba(0,0,0,.3)}
+    .price-card.featured{border-color:rgba(255,38,56,.55)}
+    .price-card .icon{font-size:36px}.price-card h3{font-size:22px;margin:12px 0 4px}
+    .price{font-size:43px;font-weight:900;color:white;margin:12px 0 0;direction:ltr;text-align:right}
+    .price small{font-size:14px;color:var(--muted);font-weight:600}
+    .subprice{color:var(--muted);font-size:13px;margin-top:12px;line-height:1.9}
+    .weekend{color:#ff8b94;font-weight:800}
+    .features{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+    .feature{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:11px 17px;border-radius:12px;color:#d5d7dc;font-size:14px}
+    .booking{background:linear-gradient(135deg,rgba(255,38,56,.13),rgba(255,255,255,.025));border:1px solid rgba(255,38,56,.2);border-radius:24px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .booking h2{margin-top:0}.booking p{color:var(--muted);line-height:1.9;margin-bottom:0}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#888d97;font-size:13px}
+    .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .wa-float{position:fixed;bottom:22px;left:22px;z-index:20;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20c866;color:white;font-size:27px;box-shadow:0 8px 25px #0008}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;text-align:center;padding:55px 0 35px;gap:15px}.hero p{margin:0 auto 25px}.hero-art{min-height:300px}.console{height:260px;width:min(90%,400px)}.controller{font-size:100px}.prices{grid-template-columns:1fr}.booking{display:block;text-align:center}.booking .btn{margin-top:22px}.navlinks{display:none}}
+    @media(min-width:801px){.price-card.featured{transform:translateY(-10px)}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">IMRATOR <span>HE9O</span></a>
+      <div class="navlinks"><a href="#home">الرئيسية</a><a href="#prices">الأثمنة</a><a href="#contact">تواصل معنا</a></div>
+      <a class="btn" href="https://wa.me/212615461091?text=Salam%2C%20bghit%20n7جز%20wa9t%20f%20IMRATOR%20HE9O" target="_blank" rel="noopener">احجز دابا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" id="home">
+    <div>
+      <div class="tag">🎮 فضاء الألعاب والترفيه</div>
+      <h1>عيش تجربة<br><span>GAMING</span><br>بمستوى آخر</h1>
+      <p>مرحبا بيك فـ IMRATOR HE9O! اختار الجهاز ديالك، جمع صحابك، واستمتع بأقوى أجواء اللعب بأثمنة مناسبة.</p>
+      <a class="btn" href="#prices">شوف الأثمنة <span>←</span></a>
+    </div>
+    <div class="hero-art" aria-label="Gaming controller illustration">
+      <div class="glow"></div>
+      <div class="console"><div class="controller">🎮</div><div class="console-label">PLAY • COMPETE • WIN</div></div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">OUR PRICES</div>
+        <h2>الأثمنة ديالنا</h2>
+        <p>الثمن بالساعة — اختار التجربة اللي كتعجبك</p>
+      </div>
+      <div class="prices">
+        <article class="price-card">
+          <div class="icon">🎮</div><h3>PlayStation 5</h3>
+          <div class="price">5 <small>DH / الساعة</small></div>
+          <div class="subprice">نفس الثمن طوال الأسبوع</div>
+        </article>
+        <article class="price-card">
+          <div class="icon">🕹️</div><h3>PlayStation 4</h3>
+          <div class="price">3 <small>DH / الساعة</small></div>
+          <div class="subprice">نفس الثمن طوال الأسبوع</div>
+        </article>
+        <article class="price-card featured">
+          <div class="icon">🔥</div><h3>GTA 6</h3>
+          <div class="price">8 <small>DH / الساعة</small></div>
+          <div class="subprice">من الاثنين حتى الجمعة<br><span class="weekend">السبت والأحد: 10 DH / الساعة</span></div>
+        </article>
+      </div>
+      <div class="features">
+        <div class="feature">⚡ أجواء Gaming</div>
+        <div class="feature">👥 لعب مع صحابك</div>
+        <div class="feature">🏆 تحديات ومنافسة</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="booking">
+        <div><div class="eyebrow">LET'S PLAY</div><h2>واجد تلعب؟</h2><p>تواصل معنا عبر WhatsApp للاستفسار أو الحجز.</p></div>
+        <a class="btn" href="https://wa.me/212615461091?text=Salam%2C%20bghit%20n7جز%20wa9t%20f%20IMRATOR%20HE9O" target="_blank" rel="noopener">تواصل عبر WhatsApp ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 IMRATOR HE9O — جميع الحقوق محفوظة</span><span dir="ltr">GAMING LOUNGE 🎮</span></div></footer>
+<a class="wa-float" href="https://wa.me/212615461091" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+</body>
+</html>
